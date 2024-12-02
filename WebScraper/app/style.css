@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    background-color: #555;
+}
+
+#uppercontent {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 180px; /* Set a fixed width */
+    text-align: center; /* Center the text */
+    margin-left: auto;
+    margin-right: 10px; /* Adjust as needed */
+    margin-top: 10px; /* Adjust as needed */
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #2980B9;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left: auto;
+    text-align: left;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+}
+
+#start-puppeteer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px; /* Adjust margin as needed */
+    margin-top: 10px;
+    width: 180px;
+}
+
+#start-puppeteer:hover {
+    background-color: #999999;
+}
+
+#start-puppeteer:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#uppercontent button.running {
+    background-color: red;
+}
+
+#uppercontent button.running:hover {
+    background-color: #ff5f5f;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+#uppercontent button.running:focus {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+#content {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the start */
+}
+
+#logDisplay {
+    width: 98.6%;
+    background-color: black;
+    color: #ffffff;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px;
+    overflow-y: auto;
+    height: 600px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    resize: none;
+    align-self: flex-end; /* Align to the end within the flex container */
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropbtn {
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .dropdown-content {
+        min-width: 100px;
+        margin-left: 0;
+    }
+
+    #uppercontent {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    #content {
+        align-items: flex-start;
+    }
+
+    #logDisplay {
+        height: auto;
+    }
+}
+
+
+/* Styles for #content */
+#content1 {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#content1 button {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: 28px;
+    margin-top: 90px;
+    width: 180px;
+}
+
+#content1 button:hover {
+    background-color: #999999;
+}
+
+#content1 button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#content1 button.running {
+    background-color: red;
+}
+
+#content1 button.running:hover {
+    background-color: #ff5f5f;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+#content1 button.running:focus {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+#logDisplay1 {
+    width: 95%;
+    background-color: black;
+    color: #ffffff;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 0px;
+    padding: 10px;
+    overflow-y: auto;
+    height: 505px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    resize: none;
+    margin-left: 27px;
+}
